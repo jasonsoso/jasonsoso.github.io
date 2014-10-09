@@ -1,6 +1,6 @@
 ---
 layout: page
-title: 小结其绳
+title: 杰森的博客
 tagline: Supporting tagline
 homepage: true
 ---
@@ -8,19 +8,19 @@ homepage: true
 
 # Welcome
 
-I’m 刘洪江，一个互联网后台开发的码农，其实基本上什么都不会。生活在成都，有一个儿子“左左”，受尽他的各种折磨和压迫。还有一位的老领导“左妈”，长期在其威逼利诱下，干出各种傻事，是男同胞们的典型的反面教材。
+I’m 谭建纳，一个互联网后台开发的码农。生于广东台山人，拼搏于广州。
 
 <div class="section">
 <h1 id="work">工作</h1>
 
-<p>目前在一家互联网公司工作，从事软件开发。在好几家公司呆过，对互联网广告、搜索、推荐、分布式有一定的了解，习惯使用linux上开发，对机器学习、数据挖掘、推荐系统十分感兴趣，正在自学。</p>
+<p>目前在一家互联网公司工作，从事软件开发。在好几家公司呆过，对互联网搜索、推荐、分布式有一定的了解，习惯使用linux上开发，对机器学习、推荐系统十分感兴趣，正在自学。</p>
 
 </div>
 
 <div class="section" id="tech-posts-list">
 <h1 id="blogs">博客</h1>
 
-<p>我有一个技术博客<em class="tag_box"><a href="/tech/" style="font-size:115%">刘洪江的流水帐</a></em>，开始于2012年11月，记录了个人工作和学习，近期文章：</p>
+<p>我有一个技术博客<em class="tag_box"><a href="/tech/" style="font-size:115%">杰森的流水帐</a></em>，开始于2014年10月，记录了个人工作和学习，近期文章：</p>
 
 <p class="loading"> Loading blog list...</p>
 </div>
