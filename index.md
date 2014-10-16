@@ -40,14 +40,6 @@ I’m 谭建纳，一个互联网后台开发的码农。生于广东台山，�
     </div>
 </div>
 
-<div class="section">
-    <h1 id="reading"><a href="http://book.douban.com/people/63148093/" title="豆瓣读书">Reading</a></h1>
-    <div class="douban" id="douban-reading">
-        <!-- p class="loading"> Loading douban reading...</p -->
-        <script type="text/javascript" src="http://www.douban.com/service/badge/63148093/?show=dolist&amp;n=6&amp;columns=6&amp;hidelogo=yes&amp;hideself=yes&amp;cat=book" >
-        </script> 
-    </div>
-</div>
 
 <div class="section">
     <h1 id="weibo"><a href="http://www.weibo.com/andewliuhj" title="新浪微博">微博</a></h1>
