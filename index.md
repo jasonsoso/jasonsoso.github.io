@@ -8,7 +8,7 @@ homepage: true
 
 # Welcome
 
-I’m 谭建纳，一个互联网后台开发的码农。生于广东台山人，拼搏于广州。
+I’m 谭建纳，一个互联网后台开发的码农。生于广东台山，拼搏于广州。
 
 <div class="section">
 <h1 id="work">工作</h1>
