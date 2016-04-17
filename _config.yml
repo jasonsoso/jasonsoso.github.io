@@ -21,6 +21,9 @@ social:
     url: http://weibo.com/tanjianna
   - title: envelope
     url: mailto:648636045@qq.com
+  - title: qq
+    url: http://wpa.qq.com/msgrd?v=3&uin=648636045&site=qq&menu=yes
+
 
 # Postal address (add as many lines as necessary)
 address:
