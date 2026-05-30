@@ -33,3 +33,8 @@ address:
 # Build settings
 markdown: kramdown
 permalink: pretty
+
+# ICP 备案
+beian:
+  number: 粤ICP备2026067889号
+  url: https://beian.miit.gov.cn/

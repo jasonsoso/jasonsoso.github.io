@@ -1,0 +1,27 @@
+footer {
+    padding: 20px 0 25px;
+}
+
+footer .footer-content {
+    text-align: center;
+}
+
+footer .social-buttons {
+    margin-bottom: 12px;
+}
+
+footer .copyright {
+    margin: 0 0 4px;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}
+
+footer .beian {
+    margin: 0;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    line-height: 40px;
+}
+
+footer .beian a {
+    white-space: nowrap;
+}

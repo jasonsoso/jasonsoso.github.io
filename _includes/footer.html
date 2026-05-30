@@ -1,25 +1,15 @@
   <footer>
         <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <span class="copyright">Copyright &copy; {{ site.title }} 2015-{{ site.time | date: '%Y' }} <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备2026067889号</a></span>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        {% for network in site.social %}
-                        <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
-                        </li>
-                        {% endfor %}
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <!-- <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li> -->
-                    </ul>
-                </div>
+            <div class="footer-content">
+                <ul class="list-inline social-buttons">
+                    {% for network in site.social %}
+                    <li><a href="{{ network.url }}" target="_blank"><i class="fa fa-{{ network.title }}"></i></a></li>
+                    {% endfor %}
+                </ul>
+                <p class="copyright">Copyright &copy; {{ site.title }} 2015-{{ site.time | date: '%Y' }}</p>
+                {% if site.beian.number %}
+                <p class="beian"><a href="{{ site.beian.url }}" target="_blank" rel="noopener">{{ site.beian.number }}</a></p>
+                {% endif %}
             </div>
         </div>
     </footer>
