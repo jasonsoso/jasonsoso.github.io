@@ -47,6 +47,9 @@
                         <a class="page-scroll" href="#blog">Blog</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#games">Console</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
                     <li>
@@ -128,6 +131,133 @@
             </div>
         </div>
     </section>
+
+    <!-- Dev Console Section -->
+<section id="games" class="games-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Dev Console</h2>
+                <h3 class="section-subheading text-muted">Some small experiments...</h3>
+            </div>
+        </div>
+        <div class="row text-center game-cards">
+            <div class="col-md-3 col-sm-6">
+                <div class="game-card" data-game="typer" tabindex="0" role="button" aria-label="Launch type.js">
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-keyboard-o fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">type.js</h4>
+                    <p class="text-muted game-cmd">$ node type.js</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="game-card" data-game="snake" tabindex="0" role="button" aria-label="Launch snake.js">
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-terminal fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">snake.js</h4>
+                    <p class="text-muted game-cmd">$ node snake.js</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="game-card" data-game="merge2048" tabindex="0" role="button" aria-label="Launch 2048.diff">
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-code fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">2048.diff</h4>
+                    <p class="text-muted game-cmd">$ git diff --merge</p>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="game-card" data-game="minesweeper" tabindex="0" role="button" aria-label="Launch debug.grid">
+                    <span class="fa-stack fa-3x">
+                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                        <i class="fa fa-bug fa-stack-1x fa-inverse"></i>
+                    </span>
+                    <h4 class="service-heading">debug.grid</h4>
+                    <p class="text-muted game-cmd">$ hexdump -C memory</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Game Terminal Modal -->
+<div class="modal fade game-modal" id="game-modal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content terminal-shell">
+            <div class="terminal-titlebar">
+                <span class="terminal-dot red"></span>
+                <span class="terminal-dot yellow"></span>
+                <span class="terminal-dot green"></span>
+                <span class="terminal-title">jason@dev:~/projects</span>
+                <button type="button" class="terminal-close" data-dismiss="modal" aria-label="Close">&times;</button>
+            </div>
+            <div class="terminal-tabs" id="game-tabs"></div>
+            <div class="terminal-body">
+                <div class="terminal-prompt" id="game-prompt">$ npm run play</div>
+                <div class="terminal-game-area" id="game-area"></div>
+                <div class="terminal-statusbar">
+                    <span id="game-score">score: 0</span>
+                    <span class="terminal-hint">Esc: exit</span>
+                    <span class="terminal-hint">Ctrl+Shift+B: hide</span>
+                    <span class="terminal-hint">?: help</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Boss Key Overlay -->
+<div id="boss-overlay" class="boss-overlay" aria-hidden="true">
+    <article class="boss-article">
+    <header>
+        <h1>Understanding JVM Garbage Collection</h1>
+        <p class="boss-meta">Posted on May 28, 2026 · Java · Performance</p>
+    </header>
+    <div class="boss-content">
+        <p>The Java Virtual Machine manages memory automatically through garbage collection (GC). Understanding how GC works is essential for writing high-performance Java applications, especially in latency-sensitive systems.</p>
+        <h2>Generational Hypothesis</h2>
+        <p>Most objects die young. The JVM divides the heap into Young Generation (Eden + Survivor spaces) and Old Generation (Tenured). Minor GC collects Eden frequently; objects that survive multiple collections are promoted to Old Gen.</p>
+        <pre><code>// Typical JVM flags for tuning
+-Xms512m -Xmx512m
+-XX:+UseG1GC
+-XX:MaxGCPauseMillis=200
+-XX:+PrintGCDetails</code></pre>
+        <h2>G1 Garbage Collector</h2>
+        <p>G1 (Garbage-First) is the default collector since Java 9. It divides the heap into equal-sized regions and prioritizes regions with the most reclaimable space. This enables predictable pause times for large heaps.</p>
+        <p>Key metrics to monitor: <code>GC pause time</code>, <code>allocation rate</code>, and <code>promotion rate</code>. Tools like VisualVM, JFR, and async-profiler help identify allocation hotspots.</p>
+        <h2>Common Pitfalls</h2>
+        <ul>
+            <li>Creating excessive short-lived objects in hot loops</li>
+            <li>Holding references longer than necessary (memory leaks)</li>
+            <li>Using <code>System.gc()</code> in production code</li>
+            <li>Undersized heap causing frequent Full GC</li>
+        </ul>
+        <p>In the next post we'll explore ZGC and Shenandoah for sub-millisecond pause requirements...</p>
+    </div>
+</article>
+
+</div>
+
+<!-- Shortcuts Help -->
+<div id="game-help" class="game-help" aria-hidden="true">
+    <div class="game-help-inner">
+        <h4>Keyboard Shortcuts</h4>
+        <ul>
+            <li><kbd>Esc</kbd> — Exit game</li>
+            <li><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>B</kbd> — Boss mode (fake blog)</li>
+            <li><kbd>?</kbd> — Toggle this help</li>
+        </ul>
+        <button type="button" class="btn btn-sm btn-default" id="game-help-close">Close</button>
+    </div>
+</div>
+
+<script>window.SITE_BASEURL = "";</script>
 
     <!-- About Section -->
     <section id="about">

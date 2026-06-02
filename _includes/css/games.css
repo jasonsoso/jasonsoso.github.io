@@ -1,0 +1,529 @@
+/* Dev Console section */
+.games-section {
+    background-color: #f7f7f7;
+    padding: 100px 0;
+}
+
+.game-cards {
+    margin-top: 40px;
+}
+
+.game-card {
+    cursor: pointer;
+    padding: 20px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s, transform 0.15s;
+    margin-bottom: 20px;
+}
+
+.game-card:hover,
+.game-card:focus {
+    background-color: rgba(254, 209, 54, 0.15);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+.game-card .game-cmd {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 12px;
+    color: #777;
+}
+
+.game-card .service-heading {
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+/* Terminal modal */
+.game-modal .modal-dialog {
+    width: 90%;
+    max-width: 900px;
+}
+
+.game-modal .modal-content {
+    border: none;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.terminal-shell {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    font-family: Consolas, "Courier New", monospace;
+}
+
+.terminal-titlebar {
+    background: #323233;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.terminal-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.terminal-dot.red { background: #ff5f56; }
+.terminal-dot.yellow { background: #ffbd2e; }
+.terminal-dot.green { background: #27c93f; }
+
+.terminal-title {
+    flex: 1;
+    text-align: center;
+    font-size: 12px;
+    color: #999;
+}
+
+.terminal-close {
+    background: none;
+    border: none;
+    color: #999;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+}
+
+.terminal-close:hover {
+    color: #fff;
+}
+
+.terminal-tabs {
+    background: #252526;
+    padding: 4px 8px 0;
+    display: flex;
+    gap: 2px;
+    min-height: 28px;
+}
+
+.terminal-tab {
+    background: #1e1e1e;
+    color: #fff;
+    padding: 4px 12px;
+    font-size: 12px;
+    border-radius: 4px 4px 0 0;
+}
+
+.terminal-body {
+    padding: 12px 16px 8px;
+}
+
+.terminal-prompt {
+    color: #fed136;
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.terminal-game-area {
+    background: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 4px;
+    min-height: 400px;
+    padding: 12px;
+    overflow: auto;
+    position: relative;
+}
+
+.terminal-statusbar {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #888;
+}
+
+#game-score {
+    color: #fed136;
+}
+
+.terminal-hint {
+    color: #666;
+}
+
+/* Boss overlay */
+.boss-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10000;
+    background: #fff;
+    overflow-y: auto;
+    padding: 40px 20px;
+}
+
+.boss-overlay.active {
+    display: block;
+}
+
+.boss-article {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: Georgia, "Times New Roman", serif;
+    color: #333;
+    line-height: 1.7;
+}
+
+.boss-article h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.boss-meta {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 24px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.boss-article h2 {
+    font-size: 20px;
+    margin-top: 28px;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.boss-article pre {
+    background: #f5f5f5;
+    padding: 12px 16px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+.boss-article code {
+    background: #f0f0f0;
+    padding: 2px 5px;
+    border-radius: 3px;
+    font-family: Consolas, monospace;
+    font-size: 13px;
+}
+
+.boss-article pre code {
+    background: none;
+    padding: 0;
+}
+
+/* Help overlay */
+.game-help {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10001;
+    background: rgba(0, 0, 0, 0.7);
+    align-items: center;
+    justify-content: center;
+}
+
+.game-help.active {
+    display: flex;
+}
+
+.game-help-inner {
+    background: #252526;
+    color: #d4d4d4;
+    padding: 24px 32px;
+    border-radius: 8px;
+    font-family: Consolas, monospace;
+    max-width: 400px;
+}
+
+.game-help-inner h4 {
+    color: #fed136;
+    margin-top: 0;
+}
+
+.game-help-inner kbd {
+    background: #333;
+    padding: 2px 6px;
+    border-radius: 3px;
+    border: 1px solid #555;
+}
+
+.game-help-inner ul {
+    padding-left: 20px;
+}
+
+.game-help-inner li {
+    margin-bottom: 8px;
+}
+
+/* --- Game: Typer --- */
+.typer-game {
+    font-family: Consolas, monospace;
+}
+
+.typer-stats {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #888;
+}
+
+.typer-stats span {
+    color: #fed136;
+}
+
+.typer-code {
+    background: #252526;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    word-break: break-all;
+    margin-bottom: 12px;
+    min-height: 80px;
+}
+
+.typer-char {
+    color: #666;
+}
+
+.typer-char.correct {
+    color: #4ec9b0;
+}
+
+.typer-char.incorrect {
+    color: #f44747;
+    background: rgba(244, 71, 71, 0.2);
+}
+
+.typer-char.current {
+    border-bottom: 2px solid #fed136;
+    color: #fff;
+}
+
+.typer-input {
+    width: 100%;
+    background: #252526;
+    border: 1px solid #444;
+    color: #d4d4d4;
+    padding: 10px 12px;
+    font-family: Consolas, monospace;
+    font-size: 14px;
+    border-radius: 4px;
+    outline: none;
+}
+
+.typer-input:focus {
+    border-color: #fed136;
+}
+
+.typer-done {
+    color: #4ec9b0;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+}
+
+/* --- Game: Snake --- */
+.snake-canvas {
+    display: block;
+    margin: 0 auto;
+    background: #0d0d0d;
+    border: 1px solid #333;
+}
+
+.snake-controls {
+    text-align: center;
+    margin-top: 12px;
+    color: #666;
+    font-size: 12px;
+}
+
+.snake-dpad {
+    display: none;
+    margin: 12px auto 0;
+    width: 120px;
+}
+
+.snake-dpad button {
+    background: #333;
+    border: 1px solid #555;
+    color: #d4d4d4;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.snake-dpad button:active {
+    background: #fed136;
+    color: #1e1e1e;
+}
+
+.snake-dpad-row {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+/* --- Game: 2048 --- */
+.merge2048-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 360px;
+    margin: 0 auto;
+}
+
+.merge2048-cell {
+    aspect-ratio: 1;
+    background: #252526;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #888;
+    border: 1px solid #333;
+    user-select: none;
+    word-break: break-all;
+    padding: 4px;
+    text-align: center;
+}
+
+.merge2048-cell.val-2 { background: #2d2d30; color: #858585; }
+.merge2048-cell.val-4 { background: #264f78; color: #9cdcfe; }
+.merge2048-cell.val-8 { background: #1a3a5c; color: #4fc1ff; }
+.merge2048-cell.val-16 { background: #094771; color: #4ec9b0; }
+.merge2048-cell.val-32 { background: #0e639c; color: #fff; }
+.merge2048-cell.val-64 { background: #1177bb; color: #fff; }
+.merge2048-cell.val-128 { background: #fed136; color: #1e1e1e; font-weight: bold; }
+.merge2048-cell.val-256 { background: #fec503; color: #1e1e1e; font-weight: bold; }
+.merge2048-cell.val-512 { background: #e6b800; color: #1e1e1e; font-weight: bold; }
+.merge2048-cell.val-1024 { background: #cc9900; color: #fff; font-weight: bold; font-size: 10px; }
+.merge2048-cell.val-2048 { background: #fed136; color: #1e1e1e; font-weight: bold; font-size: 10px; }
+
+.merge2048-info {
+    text-align: center;
+    color: #666;
+    font-size: 12px;
+    margin-top: 12px;
+}
+
+.merge2048-over {
+    text-align: center;
+    color: #f44747;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+/* --- Game: Minesweeper --- */
+.minesweeper-grid {
+    display: inline-grid;
+    grid-template-columns: repeat(9, 32px);
+    gap: 1px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    width: 297px;
+    justify-content: center;
+}
+
+.mine-cell {
+    width: 32px;
+    height: 32px;
+    background: #252526;
+    border: 1px solid #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    font-family: Consolas, monospace;
+    cursor: pointer;
+    user-select: none;
+    color: #858585;
+}
+
+.mine-cell:hover:not(.revealed):not(.flagged) {
+    background: #2d2d30;
+}
+
+.mine-cell.revealed {
+    background: #1e1e1e;
+    cursor: default;
+}
+
+.mine-cell.flagged {
+    color: #fed136;
+}
+
+.mine-cell.mine-hit {
+    background: #5a1d1d;
+    color: #f44747;
+}
+
+.mine-cell.num-1 { color: #569cd6; }
+.mine-cell.num-2 { color: #4ec9b0; }
+.mine-cell.num-3 { color: #f44747; }
+.mine-cell.num-4 { color: #c586c0; }
+.mine-cell.num-5 { color: #dcdcaa; }
+.mine-cell.num-6 { color: #4fc1ff; }
+
+.minesweeper-wrap {
+    text-align: center;
+}
+
+.minesweeper-info {
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 8px;
+}
+
+.minesweeper-status {
+    color: #fed136;
+    font-size: 13px;
+    margin-top: 8px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .game-modal .modal-dialog {
+        width: 95%;
+        margin: 10px auto;
+    }
+
+    .terminal-game-area {
+        min-height: 320px;
+        padding: 8px;
+    }
+
+    .snake-dpad {
+        display: block;
+    }
+
+    .merge2048-grid {
+        max-width: 280px;
+    }
+
+    .merge2048-cell {
+        font-size: 9px;
+    }
+
+    .mine-cell {
+        width: 28px;
+        height: 28px;
+        font-size: 9px;
+    }
+
+    .minesweeper-grid {
+        width: 261px;
+    }
+}

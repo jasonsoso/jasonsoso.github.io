@@ -15,6 +15,7 @@ Jason的个人网站，基于 [Jekyll](https://jekyllrb.com/) 构建，部署于
 |------|------|
 | **Header** | 个人头像、简介与导航入口 |
 | **Blog** | 外链至技术博客「Jason技术流水账」 |
+| **Dev Console** | 伪装成开发者终端的小游戏实验区（摸鱼专用） |
 | **About** | 个人经历时间线 |
 | **Contact** | 社交媒体与联系方式 |
 | **Footer** | 版权信息与备案号 |
@@ -99,6 +100,25 @@ jekyll serve
 ```
 
 构建产物默认输出至 `_site/` 目录。
+
+## Dev Console（小游戏）
+
+主页 `#games` 区块提供四款伪装成开发工具的小游戏，游戏脚本按需懒加载，不影响博客首屏性能。
+
+| 游戏 | 伪装名 | 操作 |
+|------|--------|------|
+| Code Typer | `type.js` | 打字代码片段，计 WPM |
+| Terminal Snake | `snake.js` | 方向键 / 触摸 D-pad |
+| Merge Diff | `2048.diff` | 方向键 / 滑动合并 |
+| Debug Grid | `debug.grid` | 左键翻开，右键或长按标记 |
+
+**快捷键**
+
+- `Esc` — 退出游戏
+- `Ctrl+Shift+B` — Boss 模式（切换至伪装技术博客页面）
+- `?` — 显示快捷键帮助
+
+本地最高分保存在 `localStorage`。
 
 ## 配置说明
 

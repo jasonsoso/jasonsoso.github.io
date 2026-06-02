@@ -1,0 +1,27 @@
+<article class="boss-article">
+    <header>
+        <h1>Understanding JVM Garbage Collection</h1>
+        <p class="boss-meta">Posted on May 28, 2026 · Java · Performance</p>
+    </header>
+    <div class="boss-content">
+        <p>The Java Virtual Machine manages memory automatically through garbage collection (GC). Understanding how GC works is essential for writing high-performance Java applications, especially in latency-sensitive systems.</p>
+        <h2>Generational Hypothesis</h2>
+        <p>Most objects die young. The JVM divides the heap into Young Generation (Eden + Survivor spaces) and Old Generation (Tenured). Minor GC collects Eden frequently; objects that survive multiple collections are promoted to Old Gen.</p>
+        <pre><code>// Typical JVM flags for tuning
+-Xms512m -Xmx512m
+-XX:+UseG1GC
+-XX:MaxGCPauseMillis=200
+-XX:+PrintGCDetails</code></pre>
+        <h2>G1 Garbage Collector</h2>
+        <p>G1 (Garbage-First) is the default collector since Java 9. It divides the heap into equal-sized regions and prioritizes regions with the most reclaimable space. This enables predictable pause times for large heaps.</p>
+        <p>Key metrics to monitor: <code>GC pause time</code>, <code>allocation rate</code>, and <code>promotion rate</code>. Tools like VisualVM, JFR, and async-profiler help identify allocation hotspots.</p>
+        <h2>Common Pitfalls</h2>
+        <ul>
+            <li>Creating excessive short-lived objects in hot loops</li>
+            <li>Holding references longer than necessary (memory leaks)</li>
+            <li>Using <code>System.gc()</code> in production code</li>
+            <li>Undersized heap causing frequent Full GC</li>
+        </ul>
+        <p>In the next post we'll explore ZGC and Shenandoah for sub-millisecond pause requirements...</p>
+    </div>
+</article>

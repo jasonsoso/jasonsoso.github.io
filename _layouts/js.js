@@ -8,3 +8,6 @@
 {% include js/cbpAnimatedHeader.js %}
 /* Custom Theme JavaScript*/
 {% include js/agency.js %}
+/* Dev Console Games */
+{% include js/games/stealth.js %}
+{% include js/games/registry.js %}
