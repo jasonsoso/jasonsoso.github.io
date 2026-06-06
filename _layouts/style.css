@@ -2,6 +2,7 @@
 {% include css/agency.min.css %}
 {% include css/footer.css %}
 {% include css/games.css %}
+{% include css/sections.css %}
 
 {% include css/font-awesome.min.css %}
 {% include css/fonts-googleapis.min.css %}

@@ -1,0 +1,16 @@
+/* Blog — 浅灰底，Agency 标准交替起点 */
+section#blog {
+    background-color: #f7f7f7;
+}
+
+/* Tools — 白底，夹在 Blog 灰与 Games 灰之间 */
+section.tools-section {
+    background-color: #fff;
+    border-top: 1px solid #e8e8e8;
+    border-bottom: 1px solid #e8e8e8;
+}
+
+/* Games 顶部分隔线（与 Tools 白底交界处） */
+section.games-section {
+    border-top: 1px solid #e8e8e8;
+}

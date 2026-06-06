@@ -14,6 +14,11 @@ color:
 
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+tools:
+  url: http://tools.jasonsoso.com
+  title: Jason工具包
+  description: "一组实用的 Web 小工具，涵盖日常开发与生活中的常用场景。"
+
 social:
   - title: github
     url: http://github.com/jasonsoso

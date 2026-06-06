@@ -4,6 +4,7 @@ Jason的个人网站，基于 [Jekyll](https://jekyllrb.com/) 构建，部署于
 
 - 线上地址：[www.jasonsoso.com](https://www.jasonsoso.com)
 - 技术博客：[tech.jasonsoso.com](http://tech.jasonsoso.com)
+- 工具包：[tools.jasonsoso.com](http://tools.jasonsoso.com)
 
 > A programmer, A web technology enthusiast, and A believer in openness, sharing, decentralization and freedom！
 
@@ -15,6 +16,7 @@ Jason的个人网站，基于 [Jekyll](https://jekyllrb.com/) 构建，部署于
 |------|------|
 | **Header** | 个人头像、简介与导航入口 |
 | **Blog** | 外链至技术博客「Jason技术流水账」 |
+| **Tools** | 外链至在线工具包「Jason工具包」 |
 | **Dev Console** | 伪装成开发者终端的小游戏实验区（摸鱼专用） |
 | **About** | 个人经历时间线 |
 | **Contact** | 社交媒体与联系方式 |
@@ -42,6 +44,7 @@ jasonsoso.github.io/
 │   ├── head.html        # <head> 元信息与样式引用
 │   ├── header.html      # 导航栏与首页头部
 │   ├── blog.html        # 博客板块
+│   ├── tools.html       # 工具包板块
 │   ├── about.html       # 关于我板块
 │   ├── contact.html     # 联系方式板块
 │   ├── footer.html      # 页脚
